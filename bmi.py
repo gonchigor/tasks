@@ -74,15 +74,33 @@ if age >= 18:
         str(round(weight_rec2)) + graphBMI[15:27] + str(round(weight_rec3)) + \
         graphBMI[27:37] + str(round(weight_rec4)) + graphBMI[37:]
 elif age >= 6:
-    ageIndex = age - 6
-    bmiBoy = [16, 16, 16, 17, 17, 18, 19, 20, 20, 20, 20, 21]
-    bmiGirl = [16, 16, 16, 17, 17, 18, 19, 20, 20, 21, 21, 21]
-    if sex == 'м':
-        weight_rec1 = (bmiBoy[age] - 2) * (height / 100) ** 2
-        weight_rec2 = (bmiBoy[age] + 2) * (height / 100) ** 2
-    else:
-        weight_rec1 = (bmiGirl[age] - 2) * (height / 100) ** 2
-        weight_rec2 = (bmiGirl[age] + 2) * (height / 100) ** 2
+    bmiDict = {(6, 'м'): 16,
+               (7, 'м'): 16,
+               (8, 'м'): 16,
+               (9, 'м'): 17,
+               (10, 'м'): 17,
+               (11, 'м'): 18,
+               (12, 'м'): 19,
+               (13, 'м'): 20,
+               (14, 'м'): 20,
+               (15, 'м'): 20,
+               (16, 'м'): 20,
+               (17, 'м'): 21,
+               (6, 'ж'): 16,
+               (7, 'ж'): 16,
+               (8, 'ж'): 16,
+               (9, 'ж'): 17,
+               (10, 'ж'): 17,
+               (11, 'ж'): 18,
+               (12, 'ж'): 19,
+               (13, 'ж'): 20,
+               (14, 'ж'): 20,
+               (15, 'ж'): 21,
+               (16, 'ж'): 21,
+               (17, 'ж'): 21
+               }
+    weight_rec1 = (bmiDict[(age, sex)] - 2) * (height / 100) ** 2
+    weight_rec2 = (bmiDict[(age, sex)] + 2) * (height / 100) ** 2
     graphBMI = '#' * 10 + '-' * 12 + '*' * 10
     if weight < weight_rec1:
         print('Недостаточная (дефицит) масса тела.')
