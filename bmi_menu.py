@@ -1,73 +1,173 @@
+from math import trunc
 
-'''
-Развиваем наш калькулятор BMI
-Сделать калькулятор многопользовательским
-При старте доступные команды:
-    Вывести список пользователей(LIST)
-    Добавить пользователя(ADD)
-        ввод данных нового пользователя
-    Удалить пользователя(DEL)
-    Выбрать пользователя(SELECT)
-        Введите ID/ФИО
-        После ввода - отобразить хранимые данные
-        Обновить информацию(ввести)
-'''
+scale = (16, 18.5, 25, 30)
+bmiDict = {(6, 'м'): 16,
+           (7, 'м'): 16,
+           (8, 'м'): 16,
+           (9, 'м'): 17,
+           (10, 'м'): 17,
+           (11, 'м'): 18,
+           (12, 'м'): 19,
+           (13, 'м'): 20,
+           (14, 'м'): 20,
+           (15, 'м'): 20,
+           (16, 'м'): 20,
+           (17, 'м'): 21,
+           (6, 'ж'): 16,
+           (7, 'ж'): 16,
+           (8, 'ж'): 16,
+           (9, 'ж'): 17,
+           (10, 'ж'): 17,
+           (11, 'ж'): 18,
+           (12, 'ж'): 19,
+           (13, 'ж'): 20,
+           (14, 'ж'): 20,
+           (15, 'ж'): 21,
+           (16, 'ж'): 21,
+           (17, 'ж'): 21
+           }
 users = {}
 
-while True:
-    print('\nChoose option')
-    print('menu')
-    print('1 - Вывести список пользователей(LIST)')
-    print('2 - Добавить пользователя(ADD)')
-    print('3 - Удалить пользователя(DEL)')
-    print('4 - Выбрать пользователя(SELECT)')
-    print('5 - выход из программы (EXIT)')
-    chosen = input('Введите пункт меню:').upper()
-    if chosen == '1' or chosen == 'LIST':
-        print('\n'.join(users.keys()))
-    elif chosen == '2' or chosen == 'ADD':
-        fName = input('Введите имя: ')
-        if fName in users.keys():
-            print('ERROR: user already exists')
-        else:
-            sex = input('Укажите пол (м - мужской, ж - женский): ').lower()
-            age = int(input('Укажите возраст: '))
-            height = float(input('Введите рост в сантиметрах: '))
-            weight = float(input('Введите вес в кг: '))
-            bmi = round(weight / (height / 100) ** 2, 2)
-            users[fName] = {'sex': sex,
-                            'age': age,
-                            'height': height,
-                            'weight': weight,
-                            'bmi': bmi}
-    elif chosen == '3' or chosen == 'DEL':
-        fName = input('Введите имя: ')
-        if fName in users.keys():
-            del users[fName]
-            print('User', fName, 'deleted')
-        else:
-            print('ERROR: user doesn\'t exist')
-    elif chosen == '4' or chosen == 'SELECT':
-        fName = input('Введите имя: ')
-        if fName in users.keys():
-            print('Пол:', users[fName]['sex'])
-            print('Возраст:', users[fName]['age'])
-            print('Рост:', users[fName]['height'])
-            print('Вес:', users[fName]['weight'])
-            print('BMI:', users[fName]['bmi'])
-            if input('Обновить информацию?[д/н]:').upper() == 'Д':
-                sex = input('Укажите пол (м - мужской, ж - женский): ').lower()
-                age = int(input('Укажите возраст: '))
-                height = float(input('Введите рост в сантиметрах: '))
-                weight = float(input('Введите вес в кг: '))
-                bmi = round(weight / (height / 100) ** 2, 2)
-                users[fName] = {'sex': sex,
-                                'age': age,
-                                'height': height,
-                                'weight': weight,
-                                'bmi': bmi}
-        else:
-            print('ERROR: user doesn\'t exist')
-    elif chosen == '5' or chosen == 'EXIT':
-        break
 
+def bmi_adult(user):
+    weight_rec1 = scale[0] * (user['height'] / 100) ** 2
+    weight_rec2 = scale[1] * (user['height'] / 100) ** 2
+    weight_rec3 = scale[2] * (user['height'] / 100) ** 2
+    weight_rec4 = scale[3] * (user['height'] / 100) ** 2
+    graph_bmi = '#' * 10 + '_' * 5 + '-' * 12 + '*' * 10 + '+' * 5
+    if user['bmi'] <= scale[0]:
+        print('Выраженный дефицит массы тела. Обратитесь к специалисту.')
+        index = trunc(user['weight'] / (weight_rec1 + 0.01) * 10)
+    elif user['bmi'] < scale[1]:
+        print('Недостаточная (дефицит) масса тела. Скорректируйте питание.')
+        index = trunc((user['weight'] - weight_rec1) / (weight_rec2 - weight_rec1 + 0.01) * 5) + 10
+    elif user['bmi'] < scale[2]:
+        print('Ваш вес в норме (по методике ВОЗ).')
+        index = trunc((user['weight'] - weight_rec2) / (weight_rec3 - weight_rec2 + 0.01) * 12) + 15
+    elif user['bmi'] < scale[3]:
+        print('Ожирение. Скорректируйте питание.')
+        index = trunc((user['weight'] - weight_rec3) / (weight_rec4 - weight_rec3 + 0.01) * 10) + 27
+    else:
+        print('Ожирение резкое. Обратитесь к специалисту.')
+        index = 37 + trunc((user['weight'] - weight_rec2) * 10 / weight_rec2)
+        if index > 40:
+            index = 40
+    graph_bmi = graph_bmi[:index] + 'x' + graph_bmi[index + 1:]
+    graph_bmi = '0' + graph_bmi[:10] + str(round(weight_rec1)) + graph_bmi[10:15] + \
+                str(round(weight_rec2)) + graph_bmi[15:27] + str(round(weight_rec3)) + \
+                graph_bmi[27:37] + str(round(weight_rec4)) + graph_bmi[37:]
+    print('Ваш вес находится в позиции x на диаграмме веса для вашего роста:')
+    print(graph_bmi)
+
+
+def bmi_child(user):
+    weight_rec1 = (bmiDict[(user['age'], user['sex'])] - 2) * (user['height'] / 100) ** 2
+    weight_rec2 = (bmiDict[(user['age'], user['sex'])] + 2) * (user['height'] / 100) ** 2
+    graph_bmi = '#' * 10 + '-' * 12 + '*' * 10
+    if user['weight'] < weight_rec1:
+        print('Недостаточная (дефицит) масса тела.')
+        index = trunc(user['weight'] / (weight_rec1 + 0.01) * 10)
+    elif user['weight'] < weight_rec2:
+        print('Ваш вес в норме.')
+        index = trunc((user['weight'] - weight_rec1) / (weight_rec2 - weight_rec1 + 0.01) * 12) + 10
+    else:
+        print('Избыточный вес')
+        index = 22 + trunc((user['weight'] - weight_rec2) * 10 / weight_rec2)
+        if index > 30:
+            index = 30
+    graph_bmi = graph_bmi[:index] + 'x' + graph_bmi[index + 1:]
+    graph_bmi = '0' + graph_bmi[:10] + str(round(weight_rec1)) + graph_bmi[10:22] + \
+                str(round(weight_rec2)) + graph_bmi[22:32]
+    print('Ваш вес находится в позиции x на диаграмме веса для вашего роста:')
+    print(graph_bmi)
+
+
+def bmi_advice(user):
+    if user['age'] >= 18:
+        # расчет веса человека в зависимости от роста и рекомендаций ВОЗ.
+        # Формирование шкалы.
+        bmi_adult(user)
+    elif user['age'] >= 6:
+        bmi_child(user)
+
+
+def bmi_greeting(f_name_, user):
+    greeting = 'Уважаемый ' if user['sex'] == 'м' else 'Уважаемая '
+    greeting += f_name_ + '\nВаш возраст: ' + str(user['age']) + '\nВаш рост: ' + str(
+        user['height']) + '\nВаш вес: ' + str(
+        user['weight']) + '\nВаш BMI: ' + str(user['bmi'])
+    print(greeting)
+
+
+def menu_list():
+    print('\n'.join(users.keys()))
+
+
+def input_info(f_name):
+    sex_ = input('Укажите пол (м - мужской, ж - женский): ').lower()
+    age_ = int(input('Укажите возраст: '))
+    height_ = float(input('Введите рост в сантиметрах: '))
+    weight_ = float(input('Введите вес в кг: '))
+    bmi_ = round(weight_ / (height_ / 100) ** 2, 2)
+    users[f_name] = {'sex': sex_,
+                     'age': age_,
+                     'height': height_,
+                     'weight': weight_,
+                     'bmi': bmi_}
+
+
+def menu_add():
+    f_name = input('Введите имя: ')
+    if f_name in users.keys():
+        print('ERROR: user already exists')
+    else:
+        input_info(f_name)
+        bmi_greeting(f_name, users[f_name])
+        bmi_advice(users[f_name])
+
+
+def menu_del():
+    f_name = input('Введите имя: ')
+    if f_name in users.keys():
+        del users[f_name]
+        print('User', f_name, 'deleted')
+    else:
+        print('ERROR: user doesn\'t exist')
+
+
+def menu_select():
+    f_name = input('Введите имя: ')
+    if f_name in users.keys():
+        bmi_greeting(f_name, users[f_name])
+        bmi_advice(users[f_name])
+        if input('Обновить информацию?[д/н]:').upper() == 'Д':
+            input_info(f_name)
+            bmi_greeting(f_name, users[f_name])
+            bmi_advice(users[f_name])
+    else:
+        print('ERROR: user doesn\'t exist')
+
+
+def main_menu():
+    while True:
+        print('\nChoose option')
+        print('menu')
+        print('1 - Вывести список пользователей(LIST)')
+        print('2 - Добавить пользователя(ADD)')
+        print('3 - Удалить пользователя(DEL)')
+        print('4 - Выбрать пользователя(SELECT)')
+        print('5 - выход из программы (EXIT)')
+        chosen = input('Введите пункт меню:').upper()
+        if chosen == '1' or chosen == 'LIST':
+            menu_list()
+        elif chosen == '2' or chosen == 'ADD':
+            menu_add()
+        elif chosen == '3' or chosen == 'DEL':
+            menu_del()
+        elif chosen == '4' or chosen == 'SELECT':
+            menu_select()
+        elif chosen == '5' or chosen == 'EXIT':
+            break
+
+
+main_menu()
