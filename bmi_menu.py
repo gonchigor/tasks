@@ -1,4 +1,5 @@
 from math import trunc
+import sys
 
 scale = (16, 18.5, 25, 30)
 bmiDict = {(6, 'м'): 16,
@@ -56,8 +57,7 @@ def bmi_adult(user):
     graph_bmi = '0' + graph_bmi[:10] + str(round(weight_rec1)) + graph_bmi[10:15] + \
                 str(round(weight_rec2)) + graph_bmi[15:27] + str(round(weight_rec3)) + \
                 graph_bmi[27:37] + str(round(weight_rec4)) + graph_bmi[37:]
-    print('Ваш вес находится в позиции x на диаграмме веса для вашего роста:')
-    print(graph_bmi)
+    return 'Ваш вес находится в позиции x на диаграмме веса для вашего роста:' + '\n' + graph_bmi
 
 
 def bmi_child(user):
@@ -78,17 +78,16 @@ def bmi_child(user):
     graph_bmi = graph_bmi[:index] + 'x' + graph_bmi[index + 1:]
     graph_bmi = '0' + graph_bmi[:10] + str(round(weight_rec1)) + graph_bmi[10:22] + \
                 str(round(weight_rec2)) + graph_bmi[22:32]
-    print('Ваш вес находится в позиции x на диаграмме веса для вашего роста:')
-    print(graph_bmi)
+    return 'Ваш вес находится в позиции x на диаграмме веса для вашего роста:' + '\n' + graph_bmi
 
 
 def bmi_advice(user):
     if user['age'] >= 18:
         # расчет веса человека в зависимости от роста и рекомендаций ВОЗ.
         # Формирование шкалы.
-        bmi_adult(user)
+        return bmi_adult(user)
     elif user['age'] >= 6:
-        bmi_child(user)
+        return bmi_child(user)
 
 
 def bmi_greeting(f_name_, user):
@@ -96,7 +95,7 @@ def bmi_greeting(f_name_, user):
     greeting += f_name_ + '\nВаш возраст: ' + str(user['age']) + '\nВаш рост: ' + str(
         user['height']) + '\nВаш вес: ' + str(
         user['weight']) + '\nВаш BMI: ' + str(user['bmi'])
-    print(greeting)
+    return greeting
 
 
 def menu_list():
@@ -122,8 +121,8 @@ def menu_add():
         print('ERROR: user already exists')
     else:
         input_info(f_name)
-        bmi_greeting(f_name, users[f_name])
-        bmi_advice(users[f_name])
+        print(bmi_greeting(f_name, users[f_name]))
+        print(bmi_advice(users[f_name]))
 
 
 def menu_del():
@@ -138,12 +137,12 @@ def menu_del():
 def menu_select():
     f_name = input('Введите имя: ')
     if f_name in users.keys():
-        bmi_greeting(f_name, users[f_name])
-        bmi_advice(users[f_name])
+        print(bmi_greeting(f_name, users[f_name]))
+        print(bmi_advice(users[f_name]))
         if input('Обновить информацию?[д/н]:').upper() == 'Д':
             input_info(f_name)
-            bmi_greeting(f_name, users[f_name])
-            bmi_advice(users[f_name])
+            print(bmi_greeting(f_name, users[f_name]))
+            print(bmi_advice(users[f_name]))
     else:
         print('ERROR: user doesn\'t exist')
 
@@ -167,7 +166,7 @@ def main_menu():
         elif chosen == '4' or chosen == 'SELECT':
             menu_select()
         elif chosen == '5' or chosen == 'EXIT':
-            break
+            sys.exit(0)
 
 
 main_menu()
