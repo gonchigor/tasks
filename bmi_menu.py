@@ -1,5 +1,6 @@
 from math import trunc
 import sys
+import functools
 
 scale = (16, 18.5, 25, 30)
 bmiDict = {(6, 'м'): 16,
@@ -28,8 +29,38 @@ bmiDict = {(6, 'м'): 16,
            (17, 'ж'): 21
            }
 users = {}
+login = ''
+userLogin = {
+    'admin': 'qwerty',
+    'user': '12345'
+}
 
 
+def login_user():
+    global login
+    if login:
+        return True
+    while True:
+        user_name = input('Имя пользователя:')
+        password = input('Пароль:')
+        if userLogin.get(user_name) == password:
+            login = user_name
+            print('Вход произведен')
+            return True
+        if input('Неверное имя пользователя или пароль. Продолжить? [д/н]').upper() == 'Н':
+            return False
+
+
+def login_required(func):
+    @functools.wraps(func)
+    def wrapper_decorator(*args, **kwargs):
+        if login or login_user():
+            return func(*args, **kwargs)
+        return
+    return wrapper_decorator
+
+
+# логика ИМТ
 def bmi_adult(user):
     weight_rec1 = scale[0] * (user['height'] / 100) ** 2
     weight_rec2 = scale[1] * (user['height'] / 100) ** 2
@@ -98,10 +129,7 @@ def bmi_greeting(f_name_, user):
     return greeting
 
 
-def menu_list():
-    print('\n'.join(users.keys()))
-
-
+# ввод и обновление данных
 def input_info(f_name):
     sex_ = input('Укажите пол (м - мужской, ж - женский): ').lower()
     age_ = int(input('Укажите возраст: '))
@@ -115,6 +143,16 @@ def input_info(f_name):
                      'bmi': bmi_}
 
 
+# Блоки меню
+@login_required
+def menu_list():
+    if users.keys().__len__() > 0:
+        print('\n'.join(users.keys()))
+    else:
+        print('Список пуст')
+
+
+@login_required
 def menu_add():
     f_name = input('Введите имя: ')
     if f_name in users.keys():
@@ -125,6 +163,7 @@ def menu_add():
         print(bmi_advice(users[f_name]))
 
 
+@login_required
 def menu_del():
     f_name = input('Введите имя: ')
     if f_name in users.keys():
@@ -134,6 +173,7 @@ def menu_del():
         print('ERROR: user doesn\'t exist')
 
 
+@login_required
 def menu_select():
     f_name = input('Введите имя: ')
     if f_name in users.keys():
@@ -148,25 +188,29 @@ def menu_select():
 
 
 def main_menu():
+    print('\nChoose option')
+    print('menu')
+    print('1 - Вывести список пользователей(LIST)')
+    print('2 - Добавить пользователя(ADD)')
+    print('3 - Удалить пользователя(DEL)')
+    print('4 - Выбрать пользователя(SELECT)')
+    print('5 - выход из программы (EXIT)')
+    chosen = input('Введите пункт меню:').upper()
+    if chosen == '1' or chosen == 'LIST':
+        menu_list()
+    elif chosen == '2' or chosen == 'ADD':
+        menu_add()
+    elif chosen == '3' or chosen == 'DEL':
+        menu_del()
+    elif chosen == '4' or chosen == 'SELECT':
+        menu_select()
+    elif chosen == '5' or chosen == 'EXIT':
+        sys.exit(0)
+
+
+def start_program():
     while True:
-        print('\nChoose option')
-        print('menu')
-        print('1 - Вывести список пользователей(LIST)')
-        print('2 - Добавить пользователя(ADD)')
-        print('3 - Удалить пользователя(DEL)')
-        print('4 - Выбрать пользователя(SELECT)')
-        print('5 - выход из программы (EXIT)')
-        chosen = input('Введите пункт меню:').upper()
-        if chosen == '1' or chosen == 'LIST':
-            menu_list()
-        elif chosen == '2' or chosen == 'ADD':
-            menu_add()
-        elif chosen == '3' or chosen == 'DEL':
-            menu_del()
-        elif chosen == '4' or chosen == 'SELECT':
-            menu_select()
-        elif chosen == '5' or chosen == 'EXIT':
-            sys.exit(0)
+        main_menu()
 
 
-main_menu()
+start_program()
