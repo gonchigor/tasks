@@ -1,6 +1,8 @@
 from math import trunc
 import sys
 import functools
+import pickle
+import os
 
 scale = (16, 18.5, 25, 30)
 bmiDict = {(6, 'м'): 16,
@@ -28,12 +30,23 @@ bmiDict = {(6, 'м'): 16,
            (16, 'ж'): 21,
            (17, 'ж'): 21
            }
-users = {}
+fileName = ''
+if len(sys.argv) > 1:
+    fileName = sys.argv[1]
+else:
+    fileName = 'bmi.dat'
 login = ''
 userLogin = {
     'admin': 'qwerty',
-    'user': '12345'
+    'user': '12345',
+    'root': 'root',
+    'bad': '123'
 }
+users = {}
+if os.path.exists(fileName):
+    with open(fileName, 'rb') as dataFile:
+        users = pickle.load(dataFile)
+        userLogin = pickle.load(dataFile)
 
 
 def login_user():
@@ -187,6 +200,13 @@ def menu_select():
         print('ERROR: user doesn\'t exist')
 
 
+def menu_exit():
+    with open(fileName, 'wb') as saveFile:
+        pickle.dump(users, saveFile)
+        pickle.dump(userLogin, saveFile)
+    sys.exit(0)
+
+
 def main_menu():
     print('\nChoose option')
     print('menu')
@@ -194,7 +214,7 @@ def main_menu():
     print('2 - Добавить пользователя(ADD)')
     print('3 - Удалить пользователя(DEL)')
     print('4 - Выбрать пользователя(SELECT)')
-    print('5 - выход из программы (EXIT)')
+    print('0 - выход из программы (EXIT)')
     chosen = input('Введите пункт меню:').upper()
     if chosen == '1' or chosen == 'LIST':
         menu_list()
@@ -204,8 +224,8 @@ def main_menu():
         menu_del()
     elif chosen == '4' or chosen == 'SELECT':
         menu_select()
-    elif chosen == '5' or chosen == 'EXIT':
-        sys.exit(0)
+    elif chosen == '0' or chosen == 'EXIT':
+        menu_exit()
 
 
 def start_program():
@@ -214,3 +234,4 @@ def start_program():
 
 
 start_program()
+
