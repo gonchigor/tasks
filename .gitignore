@@ -1,1 +1,4 @@
 *.csv
+house.py
+/.gitignore
+test_class.py
