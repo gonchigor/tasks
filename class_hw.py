@@ -70,7 +70,7 @@ if __name__ == "__main__":
     intercept = Intercept(p1, p2)
     print("Отрезок:", intercept)
     print("Длина отрезка:", intercept.length())
-    print("Угол отрезка(к оси X):", intercept.angular())
+    print("Угол отрезка(к оси X) в градусах:", intercept.angular())
     p2.shiftXY(5, 9)
     print("Вторая точка перемещена:", p2)
     print("При этом отрезок не изменился:", intercept)
