@@ -1,4 +1,6 @@
 *.csv
 house.py
-/.gitignore
+\.gitignore
 test_class.py
+src\.idea
+src\__pycache__
