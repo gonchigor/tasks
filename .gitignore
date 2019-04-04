@@ -2,5 +2,4 @@
 house.py
 \.gitignore
 test_class.py
-src\.idea
-src\__pycache__
+env
