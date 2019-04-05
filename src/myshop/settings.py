@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 [
     'hello',
     'contacts',
+    'dimensionsapp',
 ]
 
 MIDDLEWARE = [
