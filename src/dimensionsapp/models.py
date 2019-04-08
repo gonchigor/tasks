@@ -17,36 +17,41 @@ class Dimension(models.Model):
 class Author(Dimension):
     biography = models.TextField("Биография", blank=True, )
     class Meta(Dimension.Meta):
-        verbose_name = 'Автор'
-        verbose_name_plural = 'Авторы'
+        verbose_name = 'автор'
+        verbose_name_plural = 'авторы'
 
 
 class Serie(Dimension):
     class Meta(Dimension.Meta):
-        verbose_name = 'Серия'
-        verbose_name_plural = 'Серии'
+        verbose_name = 'серия'
+        verbose_name_plural = 'серии'
 
 
 class Jenre(Dimension):
     class Meta(Dimension.Meta):
-        verbose_name = 'Жанр'
-        verbose_name_plural = 'Жанры'
+        verbose_name = 'жанр'
+        verbose_name_plural = 'жанры'
 
 
 class PublishingHouse(Dimension):
     class Meta(Dimension.Meta):
-        verbose_name = 'Издательство'
-        verbose_name_plural = 'Издательства'
+        verbose_name = 'издательство'
+        verbose_name_plural = 'издательства'
 
 
 class FormatBook(Dimension):
     class Meta(Dimension.Meta):
-        verbose_name = 'Формат'
-        verbose_name_plural = 'Форматы'
+        verbose_name = 'формат'
+        verbose_name_plural = 'форматы'
 
 class Binding(Dimension):
     class Meta(Dimension.Meta):
-        verbose_name = 'Переплет'
-        verbose_name_plural = 'Переплеты'
+        verbose_name = 'переплет'
+        verbose_name_plural = 'переплеты'
 
 
+class AgeRestriction(Dimension):
+    class Meta(Dimension.Meta):
+        verbose_name = "возрастное ограничение"
+        verbose_name_plural = "возрастные ограничения"
+        ordering = []
