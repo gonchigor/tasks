@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Dimension(models.Model):
-    name = models.CharField("Наименование", max_length=50, )
+    name = models.CharField("Наименование", max_length=50, unique=True)
     description = models.TextField("Описание", blank=True, )
 
     def __str__(self):
