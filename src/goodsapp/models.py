@@ -3,6 +3,7 @@ from dimensionsapp import models as referen
 
 # Create your models here.
 
+
 class Book(models.Model):
     name = models.CharField("Название книги", max_length=200)
     image_field = models.ImageField("Фото обложки", blank=True, null=True, upload_to='bookimage')

@@ -46,7 +46,7 @@ def author_book(author):
 
 def print_author_book(author):
     for book in author_book(author):
-        print(book)
+        print(book.description())
 
 
 class ObjUtil:
