@@ -3,11 +3,11 @@ from dimensionsapp.models import *
 
 
 def create_author(data):
-    aut = Author(name=data['name'])
-    if 'description' in data.keys():
-        aut.description = data['description']
-    if 'biography' in data.keys():
-        aut.biography = data['biography']
+    aut = Author(**data)
+    # if 'description' in data.keys():
+    #     aut.description = data['description']
+    # if 'biography' in data.keys():
+    #     aut.biography = data['biography']
     aut.save()
 
 
@@ -34,8 +34,8 @@ def update_authors(data):
 
 
 def bulk_create_authors(count, default_name):
-    list = [Author(name=default_name + str(i)) for i in range(1, count + 1)]
-    return Author.objects.bulk_create(list)
+    list_ = [Author(name=default_name + str(i)) for i in range(1, count + 1)]
+    return Author.objects.bulk_create(list_)
 
 
 def author_book(author):
@@ -54,29 +54,29 @@ class ObjUtil:
         self.model_class = model_class
 
     def create(self, data):
-        aut = self.model_class(name=data['name'])
-        if 'description' in data.keys():
-            aut.description = data['description']
+        aut = self.model_class(**data)
+        # if 'description' in data.keys():
+        #     aut.description = data['description']
         aut.save()
 
     def bulk_create(self, count, default_name):
-        list = [self.model_class(name=default_name + str(i)) for i in range(1, count + 1)]
-        self.model_class.objects.bulk_create(list)
+        list_ = [self.model_class(name=default_name + str(i)) for i in range(1, count + 1)]
+        self.model_class.objects.bulk_create(list_)
 
     def count(self, name=None):
         if name is None:
             return self.model_class.objects.count()
         return self.model_class.objects.filter(name__startswith=name).count()
 
-    def delete(self, id):
+    def delete(self, id_key):
         try:
-            if type(id) == int:
-                aut = self.model_class.objects.get(id=id)
+            if type(id_key) == int:
+                aut = self.model_class.objects.get(id=id_key)
             else:
-                aut = self.model_class.objects.get(name=id)
+                aut = self.model_class.objects.get(name=id_key)
             aut.delete()
         except self.model_class.DoesNotExist:
-            print(id, 'doesn\'t find')
+            print(id_key, 'doesn\'t find')
 
     def update(self, data):
         di = data.copy()
