@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Dimension(models.Model):
     name = models.CharField("Наименование", max_length=50, unique=True)
     description = models.TextField("Описание", blank=True, )
@@ -13,9 +15,9 @@ class Dimension(models.Model):
         ordering = ['name']
 
 
-
 class Author(Dimension):
     biography = models.TextField("Биография", blank=True, )
+
     class Meta(Dimension.Meta):
         verbose_name = 'автор'
         verbose_name_plural = 'авторы'
@@ -43,6 +45,7 @@ class FormatBook(Dimension):
     class Meta(Dimension.Meta):
         verbose_name = 'формат'
         verbose_name_plural = 'форматы'
+
 
 class Binding(Dimension):
     class Meta(Dimension.Meta):

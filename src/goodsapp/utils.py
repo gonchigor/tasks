@@ -2,42 +2,6 @@ from goodsapp.models import Book
 from dimensionsapp.models import *
 
 
-def create_author(data):
-    aut = Author(**data)
-    # if 'description' in data.keys():
-    #     aut.description = data['description']
-    # if 'biography' in data.keys():
-    #     aut.biography = data['biography']
-    aut.save()
-
-
-def delete_author(id):
-    try:
-        if type(id) == int:
-            aut = Author.objects.get(id=id)
-        else:
-            aut = Author.objects.get(name=id)
-        aut.delete()
-    except Author.DoesNotExist:
-        print(id, 'doesn\'t find')
-
-
-def count_authors(name=None):
-    if name is None:
-        return Author.objects.count()
-    return Author.objects.filter(name__startswith=name).count()
-
-
-def update_authors(data):
-    name = data.pop("name")
-    return Author.objects.update_or_create(name=name, defaults=data)
-
-
-def bulk_create_authors(count, default_name):
-    list_ = [Author(name=default_name + str(i)) for i in range(1, count + 1)]
-    return Author.objects.bulk_create(list_)
-
-
 def author_book(author):
     if type(author) == str:
         author = Author.objects.get(name=author)
@@ -117,4 +81,3 @@ def create_book(book_dict):
     for jenre in book_dict['jenre']:
         jen_obj, created = jen_gen.update(jenre)
         book.jenre.add(jen_obj)
-    book.save()
