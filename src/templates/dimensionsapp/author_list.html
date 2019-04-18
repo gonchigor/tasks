@@ -1,0 +1,20 @@
+{% extends 'dimension_list.html' %}
+
+{% block title %}
+    Авторы
+{% endblock %}
+
+{% block dimension_list %}
+            <tr>
+                <th>Имя</th>
+                <th>Описание</th>
+                <th>Биография</th>
+            </tr>
+            {% for object in object_list %}
+                <tr>
+                    <td><a href="{% url 'author_detail' object.pk %}">{{ object.name }}</a></td>
+                    <td>{{  object.description }}</td>
+                    <td>{{ object.biography }}</td>
+                </tr>
+            {% endfor %}
+        {% endblock %}

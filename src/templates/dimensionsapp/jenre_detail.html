@@ -1,1 +1,12 @@
-{% include "dimension_template.html" %}
+{% extends 'dimension_detail.html' %}
+{% block title %}
+  Жанр {{ object.name }}
+{% endblock %}
+
+{% block to_list %}
+    <a href="{% url 'jenre_list' %}">Все жанры</a>
+{% endblock %}
+
+{% block dimension %}
+    {% include "dimension_template.html" %}
+{% endblock %}

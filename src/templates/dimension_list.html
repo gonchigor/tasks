@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Title
+    {% endblock %}</title>
+</head>
+<body>
+
+    <table border="1" border_collapse="collapse">
+        {% block dimension_list %}
+            <tr>
+                <th>Наименование</th>
+                <th>Описание</th>
+            </tr>
+            {% for object in object_list %}
+                <tr>
+                    <td><a href="{% url url_detail object.pk %}">{{ object.name }}</a></td>
+                    <td>{{  object.description }}</td>
+                </tr>
+            {% endfor %}
+        {% endblock %}
+    </table>
+
+</body>
+</html>

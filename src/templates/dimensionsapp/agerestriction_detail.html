@@ -1,1 +1,14 @@
-{% include "dimension_template.html" %}
+{% extends 'dimension_detail.html' %}
+{% block title %}
+  Возрастное ограничение {{ object.name }}
+{% endblock %}
+
+{% block to_list %}
+    <a href="{% url 'agerestriction_list' %}">Все возрастные ограничения</a>
+{% endblock %}
+
+{% block dimension %}
+    {% include "dimension_template.html" %}
+{% endblock %}
+
+

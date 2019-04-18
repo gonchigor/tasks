@@ -1,1 +1,13 @@
-{% include "dimension_template.html" %}
+{% extends 'dimension_detail.html' %}
+{% block title %}
+  Серия {{ object.name }}
+{% endblock %}
+
+{% block to_list %}
+    <a href="{% url 'serie_list' %}">Все серии</a>
+{% endblock %}
+
+{% block dimension %}
+    {% include "dimension_template.html" %}
+{% endblock %}
+
