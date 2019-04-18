@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from hello.views import index
 from contacts.views import contacts
-from myshop import settings
+from . import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -25,4 +25,7 @@ urlpatterns = [
     path('hello/', index),
     path('contacts', contacts),
     path('directory/', include('dimensionsapp.dimurl'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

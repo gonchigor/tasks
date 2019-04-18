@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 from dimensionsapp.models import Author, Serie, Jenre, PublishingHouse, FormatBook, Binding, AgeRestriction
 # Create your views here.
 
@@ -30,3 +31,7 @@ class BindingDetailView(DetailView):
 
 class AgeRestrictionDetailView(DetailView):
     model = AgeRestriction
+
+
+class SerieListView(ListView):
+    model = Serie

@@ -1,6 +1,6 @@
 from django.urls import path
-from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailView, PublishingHouseDetailView \
-    , FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView
+from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailView, PublishingHouseDetailView, \
+     FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView
 
 urlpatterns = [
     path('author/<int:pk>/', AuthorDetailView.as_view()),
@@ -10,4 +10,5 @@ urlpatterns = [
     path('format/<int:pk>/', FormatBookDetailView.as_view()),
     path('binding/<int:pk>/', BindingDetailView.as_view()),
     path('agerestriction/<int:pk>/', AgeRestrictionDetailView.as_view()),
+    path('serie/', SerieListView.as_view()),
 ]
