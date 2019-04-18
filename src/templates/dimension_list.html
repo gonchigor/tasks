@@ -7,8 +7,12 @@
     {% endblock %}</title>
 </head>
 <body>
+    {% include 'menu.html' %}
+    {% block header %}
+        <H1>Справочники</H1>
+    {% endblock %}
 
-    <table border="1" border_collapse="collapse">
+    <table border="1">
         {% block dimension_list %}
             <tr>
                 <th>Наименование</th>

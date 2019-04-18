@@ -2,6 +2,7 @@ from django.urls import path
 from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailView, PublishingHouseDetailView, \
      FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView, SerieListView, AuthorListView, \
      JenreListView, PublishingHouseListView, FormatBookListView, BindingListView, AgeRestrictionListView
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('author/<int:pk>/', AuthorDetailView.as_view(), name='author_detail'),
@@ -17,5 +18,6 @@ urlpatterns = [
     path('publishing/', PublishingHouseListView.as_view(), name='publishing_house_list'),
     path('format/', FormatBookListView.as_view(), name='format_book_list'),
     path('binding/', BindingListView.as_view(), name='binding_list'),
-    path('agerestriction/', AgeRestrictionListView.as_view, name='age_restriction_list'),
+    path('agerestriction/', AgeRestrictionListView.as_view(), name='age_restriction_list'),
+    path('', TemplateView.as_view(template_name='dimensionsapp/main_menu.html'))
 ]
