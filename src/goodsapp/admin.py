@@ -17,3 +17,4 @@ class BookAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Book, BookAdmin)
+admin.site.register(models.Menu)

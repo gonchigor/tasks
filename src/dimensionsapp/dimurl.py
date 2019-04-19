@@ -19,5 +19,4 @@ urlpatterns = [
     path('format/', FormatBookListView.as_view(), name='format_book_list'),
     path('binding/', BindingListView.as_view(), name='binding_list'),
     path('agerestriction/', AgeRestrictionListView.as_view(), name='age_restriction_list'),
-    path('', TemplateView.as_view(template_name='dimensionsapp/main_menu.html'))
 ]

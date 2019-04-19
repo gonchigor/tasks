@@ -19,12 +19,14 @@ from hello.views import index
 from contacts.views import contacts
 from . import settings
 from django.conf.urls.static import static
+from goodsapp.views import MenuList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', index),
     path('contacts', contacts),
-    path('directory/', include('dimensionsapp.dimurl'))
+    path('directory/', include('dimensionsapp.dimurl')),
+    path('', MenuList.as_view())
 ]
 
 if settings.DEBUG:
