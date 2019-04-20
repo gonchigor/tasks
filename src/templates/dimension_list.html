@@ -12,6 +12,13 @@
     {% block header %}
         <H1>Справочники</H1>
     {% endblock %}
+    {% block searchform %}
+        <form action="" method="get">
+            {{ form }}
+            <button type="submit">Поиск</button>
+        </form>
+        <br>
+    {% endblock %}
 
     <table border="1">
         {% block dimension_list %}

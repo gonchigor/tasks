@@ -3,9 +3,10 @@ from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailVi
      FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView, SerieListView, AuthorListView, \
      JenreListView, PublishingHouseListView, FormatBookListView, BindingListView, AgeRestrictionListView
 from django.views.generic import TemplateView
-from goodsapp.views import BookDetailView, BookListView
+from goodsapp.views import BookDetailView, BookListView, MenuList
 
 urlpatterns = [
+    path('author/', AuthorListView.as_view(), name='author_list'),
     path('author/<int:pk>/', AuthorDetailView.as_view(), name='author_detail'),
     path('serie/<int:pk>/', SerieDetailView.as_view(), name='serie_detail'),
     path('jenre/<int:pk>/', JenreDetailView.as_view(), name='jenre_detail'),
@@ -13,7 +14,7 @@ urlpatterns = [
     path('format/<int:pk>/', FormatBookDetailView.as_view(), name='format_book_detail'),
     path('binding/<int:pk>/', BindingDetailView.as_view(), name='binding_detail'),
     path('agerestriction/<int:pk>/', AgeRestrictionDetailView.as_view(), name='age_restriction_detail'),
-    path('author/', AuthorListView.as_view(), name='author_list'),
+
     path('serie/', SerieListView.as_view(), name='serie_list'),
     path('jenre/', JenreListView.as_view(), name='jenre_list'),
     path('publishing/', PublishingHouseListView.as_view(), name='publishing_house_list'),
@@ -23,4 +24,5 @@ urlpatterns = [
 
     path('book/', BookListView.as_view(), name='book_list'),
     path('book/<int:pk>/', BookDetailView.as_view(), name='book_detail'),
+    path('', MenuList.as_view())
 ]
