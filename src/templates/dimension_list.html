@@ -7,14 +7,15 @@
     {% endblock %}</title>
 </head>
 <body>
-
-    {% include 'goodsapp/menu_list.html' %}
+    {% include 'menu.html' %}
     {% block header %}
         <H1>Справочники</H1>
     {% endblock %}
     {% block searchform %}
         <form action="" method="get">
-            {{ form }}
+            {% block searchform_name %}
+                {{ form }}
+            {% endblock %}
             <button type="submit">Поиск</button>
         </form>
         <br>

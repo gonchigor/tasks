@@ -1,9 +1,10 @@
 from django.urls import path
 from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailView, PublishingHouseDetailView, \
      FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView, SerieListView, AuthorListView, \
-     JenreListView, PublishingHouseListView, FormatBookListView, BindingListView, AgeRestrictionListView
+     JenreListView, PublishingHouseListView, FormatBookListView, BindingListView, AgeRestrictionListView, \
+     MenuView
 from django.views.generic import TemplateView
-from goodsapp.views import BookDetailView, BookListView, MenuList
+from goodsapp.views import BookDetailView, BookListView
 
 urlpatterns = [
     path('author/', AuthorListView.as_view(), name='author_list'),
@@ -24,5 +25,5 @@ urlpatterns = [
 
     path('book/', BookListView.as_view(), name='book_list'),
     path('book/<int:pk>/', BookDetailView.as_view(), name='book_detail'),
-    path('', MenuList.as_view())
+    path('', MenuView.as_view())
 ]

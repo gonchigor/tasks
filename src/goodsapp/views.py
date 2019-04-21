@@ -11,7 +11,6 @@ class MenuList(ListView):
 
 class BookListView(ListView):
     model = Book
-    extra_context = {'menu_list': Menu.objects.all()}
 
 
 class BookDetailView(DetailView):
