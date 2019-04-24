@@ -1,7 +1,9 @@
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
-from dimensionsapp.models import Author, Serie, Jenre, PublishingHouse, FormatBook, Binding, AgeRestriction
-from dimensionsapp.form import SearchFormAuthor, ListViewFilter
+from dimensionsapp.models import Author, Serie, Jenre, PublishingHouse, FormatBook, Binding,\
+    AgeRestriction
+from dimensionsapp.form import SearchFormAuthor, ListViewFilter, AuthorModel, JenreModel, SerieModel,\
+    PublishingHouseModel, FormatBookModel, BindingModel, AgeRestrictionModel
 from django.views.generic import TemplateView
 from goodsapp.models import Menu
 # Create your views here.
@@ -81,4 +83,35 @@ class MenuView(TemplateView):
 
 
 class SerieCreateView(CreateView):
-    pass
+    model = Serie
+    form_class = SerieModel
+
+
+class AuthorCreateView(CreateView):
+    model = Author
+    form_class = AuthorModel
+
+
+class JenreCreateView(CreateView):
+    model = Jenre
+    form_class = JenreModel
+
+
+class PublishingHouseCreateView(CreateView):
+    model = PublishingHouse
+    form_class = PublishingHouseModel
+
+
+class FormatBookCreateView(CreateView):
+    model = FormatBook
+    form_class = FormatBookModel
+
+
+class BindingCreateView(CreateView):
+    model = Binding
+    form_class = BindingModel
+
+
+class AgeRestrictionCreateView(CreateView):
+    model = AgeRestriction
+    form_class = AgeRestrictionModel

@@ -22,11 +22,19 @@
     </div>
     <div>
         <p><strong>Название:</strong> {{ object.name }}</p>
-        <p><strong>Авторы:</strong> {{ object.authors }}</p>
-        <p><strong>Серия:</strong> {{ object.serie }}</p>
-        <p><strong>Жанры:</strong> {{ object.jenre }}</p>
+        <p><strong>Авторы:</strong>
+            {% for  author  in object.authors.all%}
+                <a href="{% url 'author_detail' author.pk %}">{{ author.name }}</a>
+            {% endfor %}
+            </p>
+        <p><strong>Серия:</strong> {{ object.serie|default_if_none:"Не указана" }}</p>
+        <p><strong>Жанры:</strong>
+            {% for jenre in object.jenre.all %}
+                <a href="{% url 'jenre_detail' jenre.pk %}">{{ jenre.name }}</a>
+            {% endfor %}
+            </p>
         <p><strong>Год издания:</strong> {{ object.year_publishing }}</p>
-        <p><strong>Количество страниц:</strong> {{ object.count_page }}</p>
+        <p><strong>Количество страниц:</strong> {{ object.count_pages }}</p>
         <p><strong>Переплет:</strong> {{ object.binding }}</p>
         <p><strong>Формат:</strong> {{ object.format_book }}</p>
         <p><strong>ISBN:</strong> {{ object.isbn }}</p>
