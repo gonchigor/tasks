@@ -5,6 +5,8 @@
     <title>{% block title %}
         Title
     {% endblock %}</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static "css/stylesheet.css" %}">
 </head>
 <body>
     {% include 'menu.html' %}
@@ -22,7 +24,7 @@
     {% endblock %}
 
     {% block create %}
-        <a href="{% block create_ankor %}#{% endblock %}">Создать</a>
+        <a href="{% block create_ankor %}#{% endblock %}" class="button">Создать</a>
     {% endblock %}
 
     <table border="1">
@@ -39,6 +41,21 @@
             {% endfor %}
         {% endblock %}
     </table>
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">Пред.</a>
+                {% endif %}
+                <span class="page-current">
+                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">След.</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
 
 </body>
 </html>

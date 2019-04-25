@@ -5,15 +5,13 @@
     <title>{% block title %}
         Title
     {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/stylesheet.css" %}">
 </head>
 <body>
-    <div>
-        {% block to_list %}
-            <a href="#">Справочник</a>
-        {% endblock %}
-    </div>
+    {% include 'menu.html' %}
     <h1>{% block maincaption %}Title{% endblock %}</h1>
-  {% block dimension %}
+    {% block dimension %}
       <form method="post" action="">
         {% csrf_token %}
         {% block dimension_form %}
@@ -22,6 +20,6 @@
         <button type="submit" name="save">Сохранить</button>
         <button type="submit" name="save-and-close"> Сохранить и закрыть</button>
       </form>
-  {% endblock %}
+    {% endblock %}
 </body>
 </html>

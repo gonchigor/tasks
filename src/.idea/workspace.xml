@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b058aedf-c07f-4b51-a519-b2b3916e898b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/igor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/igor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dimensionsapp/dimurl.py" beforeDir="false" afterPath="$PROJECT_DIR$/dimensionsapp/dimurl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dimensionsapp/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/dimensionsapp/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dimensionsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dimensionsapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dimensionsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dimensionsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dimension_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimension_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimension_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimension_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimension_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimension_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/author_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/author_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/author_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/author_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/binding_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/binding_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dimensionsapp/serie_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dimensionsapp/serie_form.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,41 +78,83 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/dimension_list.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/dimension_create.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="404">
-                  <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dimensionsapp/views.py">
+            <entry file="file://$PROJECT_DIR$/static/css/stylesheet.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1462">
-                  <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#50#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="536">
+                  <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dimensionsapp/models.py">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/author_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/binding_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimension_template.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="22">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="36" />
+                  <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="132">
+                  <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/serie_form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -102,14 +163,41 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dimensionsapp/dimurl.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="726">
-                  <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+                <state relative-caret-position="-88">
+                  <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/dimension_detail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="484">
+                  <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimension_create.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="528">
+                  <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/dimension_list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
                 </state>
               </provider>
             </entry>
@@ -123,6 +211,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -132,27 +221,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dimensionsapp/admin.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/38234d2a-1966-40d0-be53-0178b9ac7be4/console.sql" />
         <option value="38234d2a-1966-40d0-be53-0178b9ac7be4/schema/main/table/goodsapp_book.sql" />
         <option value="$PROJECT_DIR$/goodsapp/utils.py" />
         <option value="$PROJECT_DIR$/dimensionsapp/urls.py" />
-        <option value="$PROJECT_DIR$/myshop/settings.py" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/DimensionTemplate.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/AuthorDetail.html" />
         <option value="$PROJECT_DIR$/templates/dimension_template.html" />
         <option value="$PROJECT_DIR$/templates/dimension_list_template.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimension_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/author_detail.html" />
         <option value="$PROJECT_DIR$/templates/standart.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/main_menu.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html" />
         <option value="$PROJECT_DIR$/goodsapp/models.py" />
         <option value="$PROJECT_DIR$/goodsapp/admin.py" />
         <option value="$PROJECT_DIR$/goodsapp/migrations/0011_auto_20190419_1302.py" />
@@ -163,30 +241,41 @@
         <option value="$PROJECT_DIR$/templates/goodsapp/menu_view.html" />
         <option value="$PROJECT_DIR$/myshop/urls.py" />
         <option value="$PROJECT_DIR$/templates/goodsapp/book_detail.html" />
-        <option value="$PROJECT_DIR$/dimensionsapp/models.py" />
-        <option value="$PROJECT_DIR$/dimensionsapp/form.py" />
-        <option value="$PROJECT_DIR$/dimensionsapp/dimurl.py" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/binding_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/serie_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/author_form.html" />
-        <option value="$PROJECT_DIR$/templates/dimension_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/author_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_list.html" />
-        <option value="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/binding_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/formatbook_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/jenre_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_list.html" />
         <option value="$PROJECT_DIR$/templates/dimensionsapp/serie_list.html" />
-        <option value="$PROJECT_DIR$/templates/dimension_create.html" />
+        <option value="$PROJECT_DIR$/templates/css/stylesheet.css" />
+        <option value="$PROJECT_DIR$/myshop/settings.py" />
+        <option value="$PROJECT_DIR$/dimensionsapp/form.py" />
+        <option value="$PROJECT_DIR$/dimensionsapp/models.py" />
         <option value="$PROJECT_DIR$/dimensionsapp/views.py" />
+        <option value="$PROJECT_DIR$/dimensionsapp/dimurl.py" />
+        <option value="$PROJECT_DIR$/templates/dimension_create.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/author_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/author_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/binding_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/serie_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html" />
+        <option value="$PROJECT_DIR$/templates/dimension_detail.html" />
+        <option value="$PROJECT_DIR$/templates/dimension_list.html" />
+        <option value="$PROJECT_DIR$/static/css/stylesheet.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -215,12 +304,6 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="hometasks" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dimensionsapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hometasks" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,7 +323,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dimensionsapp/form.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dimensionsapp/views.py" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
@@ -254,15 +338,16 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\hometasks\src\templates" />
-      <recent name="D:\projects\hometasks\src\media\bookimage" />
-      <recent name="D:\projects\hometasks\src\hello\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\hometasks\src\templates\dimensionsapp" />
       <recent name="D:\projects\hometasks\src\templates" />
       <recent name="D:\projects\hometasks\src\templates\goodsapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\hometasks\src\static" />
+      <recent name="D:\projects\hometasks\src\templates" />
+      <recent name="D:\projects\hometasks\src\media\bookimage" />
+      <recent name="D:\projects\hometasks\src\hello\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -326,12 +411,12 @@
       <workItem from="1554909642803" duration="8501000" />
       <workItem from="1555007551381" duration="120149000" />
       <workItem from="1556097330282" duration="12731000" />
-      <workItem from="1556184985384" duration="4150000" />
+      <workItem from="1556184985384" duration="12659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191629000" />
+    <option name="totallyTimeSpent" value="200138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,12 +499,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/hello/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -434,20 +513,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dimension_list_template.html" />
-    <entry file="file://$PROJECT_DIR$/myshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimension_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../env/Lib/site-packages/django/urls/resolvers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -455,49 +520,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/standart.html" />
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/main_menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -522,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/author_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goodsapp/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="739">
@@ -550,13 +566,6 @@
     <entry file="file://$PROJECT_DIR$/goodsapp/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goodsapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -571,16 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myshop/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimension_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/goodsapp/menu_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -622,51 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dimensionsapp/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/serie_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/binding_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -678,30 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/author_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dimensionsapp/dimurl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,34 +663,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimension_create.html">
+    <entry file="file://$PROJECT_DIR$/myshop/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        <state>
+          <folding>
+            <element signature="e#222#231#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dimensionsapp/models.py">
+    <entry file="file://$PROJECT_DIR$/myshop/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="36" />
+        <state relative-caret-position="330">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dimension_list.html">
+    <entry file="file://$PROJECT_DIR$/dimensionsapp/form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dimensionsapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1462">
-          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+        <state relative-caret-position="-648">
+          <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dimensionsapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="126" column="59" lean-forward="true" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/agerestriction_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/serie_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/formatbook_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/binding_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/author_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/agerestriction_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/author_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/binding_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/publishinghouse_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/jenre_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/formatbook_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimension_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimensionsapp/serie_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dimensionsapp/dimurl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimension_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimension_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dimension_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>

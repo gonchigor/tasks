@@ -3,7 +3,8 @@ from dimensionsapp.views import AuthorDetailView, SerieDetailView, JenreDetailVi
      FormatBookDetailView, BindingDetailView, AgeRestrictionDetailView, SerieListView, AuthorListView, \
      JenreListView, PublishingHouseListView, FormatBookListView, BindingListView, AgeRestrictionListView, \
      MenuView, SerieCreateView, AuthorCreateView, JenreCreateView, PublishingHouseCreateView, \
-     FormatBookCreateView, BindingCreateView, AgeRestrictionCreateView
+     FormatBookCreateView, BindingCreateView, AgeRestrictionCreateView, AuthorUpdateView, SerieUpdateView, \
+     JenreUpdateView, PublishingHouseUpdateView, FormatBookUpdateView, BindingUpdateView, AgeRestrictionUpdateView
 from django.views.generic import TemplateView
 from goodsapp.views import BookDetailView, BookListView
 
@@ -32,6 +33,14 @@ urlpatterns = [
     path('format/create/', FormatBookCreateView.as_view(), name='format_book_create'),
     path('binding/create/', BindingCreateView.as_view(), name='binding_create'),
     path('agerestriction/create/', AgeRestrictionCreateView.as_view(), name='age_restriction_create'),
+
+    path('author/u/<int:pk>/', AuthorUpdateView.as_view(), name='author_update'),
+    path('serie/u/<int:pk>/', SerieUpdateView.as_view(), name='serie_update'),
+    path('jenre/u/<int:pk>/', JenreUpdateView.as_view(), name='jenre_update'),
+    path('publishing/u/<int:pk>/', PublishingHouseUpdateView.as_view(), name='publishing_house_update'),
+    path('format/u/<int:pk>/', FormatBookUpdateView.as_view(), name='format_book_update'),
+    path('binding/u/<int:pk>/', BindingUpdateView.as_view(), name='binding_update'),
+    path('agerestriction/u/<int:pk>/', AgeRestrictionUpdateView.as_view(), name='age_restriction_update'),
 
     path('book/', BookListView.as_view(), name='book_list'),
     path('book/<int:pk>/', BookDetailView.as_view(), name='book_detail'),

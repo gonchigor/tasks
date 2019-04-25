@@ -7,8 +7,13 @@
     <a href="{% url 'age_restriction_list' %}">Все возрастные ограничения</a>
 {% endblock %}
 
+{% block page_name %}
+        Возрастное ограничение
+      {% endblock %}
+
 {% block dimension %}
     {% include "dimension_template.html" %}
 {% endblock %}
 
+{% block update_url %}{% url 'age_restriction_update' object.pk%}{% endblock %}
 

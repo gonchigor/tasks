@@ -79,4 +79,6 @@ class AgeRestriction(Dimension):
     class Meta(Dimension.Meta):
         verbose_name = "возрастное ограничение"
         verbose_name_plural = "возрастные ограничения"
-        ordering = []
+        ordering = ['description']
+
+
