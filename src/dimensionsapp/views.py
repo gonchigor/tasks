@@ -258,6 +258,12 @@ class FormatBookUpdateView(UpdateView):
             url = reverse_lazy('format_book_detail', kwargs={'pk': self.object.pk})
         return url
 
+    def post(self, request, *args, **kwargs):
+        result = super().post(request, *args, **kwargs)
+        if 'save-as' in self.request.POST.keys() and 'pk' in kwargs.keys():
+            print(self.object)
+        return result
+
 
 class BindingUpdateView(UpdateView):
     model = Binding

@@ -19,6 +19,13 @@
         {% endblock %}
         <button type="submit" name="save">Сохранить</button>
         <button type="submit" name="save-and-close"> Сохранить и закрыть</button>
+        {% if object %}
+          {% block saveas_button %}
+            <button type="submit" name="save-as" formaction="{% block saveas_url %}{% url 'format_book_create' %}{% endblock %}">Сохранить как</button>
+          {% endblock %}
+        {% endif %}
+
+
       </form>
     {% endblock %}
 </body>
